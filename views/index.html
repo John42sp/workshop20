@@ -1,0 +1,65 @@
+<!-- extender conteudo do arquivo layout.html pra este arquivo -->
+{% extends "layout.html" %} 
+
+{% set bodyId = "page-ideas" %}
+
+
+<!-- pega o conteudo do bloco abaixo até o endblock, e coloca la no layout.html -->
+{% block content %}
+
+<section id="title">
+    <p>bem vindo</p>
+    <h1>Home</h1>
+
+    <!-- <h5>{{title}}</h5>  title = chave do nunjucks, trazendo o valor a ser renderizado na pag -->
+</section>
+
+<div id="home-flex">
+    <section id="intro">
+
+        <header>
+            <img  src="/../images/$(file.fieldname)-1581197579650.jpg" alt="">
+    
+        </header>
+    
+    
+        <main>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo recusandae alias unde! Recusandae facere consequuntur, <strong>etur ut beatae quod cumque? </strong>
+            </p>
+    
+            <p>
+                Unde id expedita in eos molestias blanditiis</strong> Unde id expedita in eos molestias blanditiis ea tempore.
+                Comece com várias coisas para lidar com esta <strong>pandemia</strong>.
+            </p>
+    
+            <p>
+                Comece com várias coisas para lidar com esta pandemia.
+            </p>
+    
+        </main>
+        
+        <section id="buttons">
+            <button onclick="onOff()" >+ Adicionar Idéia</button>                    
+            <a href="/ideias" class="fat">Ver Idéias</a>                       
+           
+        </section>
+    
+        <footer>
+            Com ❤ <a href="https://rocketseat.com.br/" target="_blank">Rocketseat</a>                
+        </footer>
+     
+    
+    </section>
+    
+    <section id="last-ideas">
+        <!-- como se fosse um componente react -->
+        {% include "all_ideas.html" %}           
+        
+    </section>
+
+</div>
+
+
+<!-- pega o conteudo do bloco acima e coloca la no layout.html -->
+{% endblock %}

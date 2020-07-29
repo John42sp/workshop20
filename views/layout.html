@@ -1,0 +1,42 @@
+<!-- ARQUIVO PADRÃO PARA PODER SER USADO EM VARIOS OUTROS, SUBSTITUINDO APENAS  O CONTEUDO  DE  -->
+
+<!DOCTYPE html>
+<!-- jkkk-->
+
+<html lang="pt-br">
+    <head>
+        <meta  charset="UTF-8" >        
+            <!-- renderizara titulo em todas paginas onde não já não estiver bloco title -->
+            {% block title %}
+                <title>Casa Criativa</title>
+            {% endblock title %}
+
+        <style>    
+        </style>
+        <!-- como se fosse um componente react -->
+        {% include "head.html" %}    
+    </head>
+
+    <body id="{{bodyId}}">        
+
+        <div id="container">           
+            <!-- AQUI ENTRA O CONTEUDO QUE ESTARÁ NO INDEX.HTML -->
+            {% block content %}
+
+            {% endblock %}
+
+        </div>       
+
+            <!--Modal-->
+            <!-- como se fosse um componente react -->
+            {% include "modal.html" %}
+
+            <script src="/script.js"></script>
+            <script>   
+        </script>
+
+
+    </body>
+
+
+</html>
